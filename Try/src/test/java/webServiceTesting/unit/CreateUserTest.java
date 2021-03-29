@@ -9,19 +9,20 @@ public class CreateUserTest {
 
   CreateUser createUser = new CreateUser();
   String jsonWithUserAndJob = "{\n" +
-      "    \"name\": \"testName\",\n" +
-      "    \"job\": \"testJob\"\n" +
-      "}";
+          "    \"name\": \"testName\",\n" +
+          "    \"job\": \"testJob\"\n" +
+          "}";
 
   String jsonWithUserNameSurnameAndJob = "{\n" +
-      "    \"name\": \"testName autoSurname\",\n" +
-      "    \"job\": \"testJob\"\n" +
-      "}";
+          "    \"name\": \"testName autoSurname\",\n" +
+          "    \"job\": \"testJob\"\n" +
+          "}";
 
   @Before
   public void setup() {
     createUser.setName("testName");
     createUser.setJob("testJob");
+    System.out.println();
   }
 
   @Test
@@ -31,7 +32,7 @@ public class CreateUserTest {
 
   @Test
   public void buildBodyWithSurname_validUserAndJob_shouldReturnJsonWithUserNameSurnameAndJob() {
+    createUser.setSurname("autoSurname");
     Assert.assertEquals(jsonWithUserNameSurnameAndJob, createUser.buildBodyWithSurname());
   }
-
 }
