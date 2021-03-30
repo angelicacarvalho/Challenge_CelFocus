@@ -1,7 +1,5 @@
 package webServiceTesting;
 
-import gherkin.deps.com.google.gson.JsonObject;
-import gherkin.deps.com.google.gson.JsonParser;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
