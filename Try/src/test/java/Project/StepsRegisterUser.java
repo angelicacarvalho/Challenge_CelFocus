@@ -3,8 +3,6 @@ package Project;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import webServiceTesting.CreateUser;
-import webServiceTesting.DeleteUser;
 import webServiceTesting.RegisterUser;
 
 public class StepsRegisterUser {

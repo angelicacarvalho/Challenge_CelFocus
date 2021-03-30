@@ -60,12 +60,4 @@ public class StepsBrowserTesting {
     {
         driver.quit();
     }
-
-/*
-    @Then("^I attach file \"(.*)\"$")
-    public void	attachFile(String file) throws  {
-        WebElement uploadElement = driver.findElement(By.id("attachment"));
-        uploadElement.sendKeys(file);
-    }
-*/
 }

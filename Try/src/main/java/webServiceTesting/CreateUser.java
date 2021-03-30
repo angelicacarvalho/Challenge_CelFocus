@@ -12,18 +12,6 @@ public class CreateUser {
 
   private final RequestSpecification requestSpecification;
 
-  public String getName() {
-    return name;
-  }
-
-  public String getJob() {
-    return job;
-  }
-
-  public String getSurname() {
-    return surname;
-  }
-
   public CreateUser() {
     this.requestSpecification = RestAssured.given()
             .baseUri("https://reqres.in/api")
