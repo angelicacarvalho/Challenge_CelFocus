@@ -11,7 +11,7 @@ public class StepsDeleteUser {
     DeleteUser deleteUser;
     int id;
 
-    @Given("^I access the API$")
+    @Given("^I access the API to delete user$")
     public void i_access_the_API(){
         deleteUser = new DeleteUser();
     }
