@@ -4,20 +4,13 @@ import gherkin.deps.com.google.gson.JsonObject;
 import gherkin.deps.com.google.gson.JsonParser;
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
+import org.json.JSONObject;
 
 public class CreateUser {
 
   private String name;
   private String job;
   private String surname;
-
-  public String getSurname() {
-    return surname;
-  }
-
-  public void setSurname(String surname) {
-    this.surname = surname;
-  }
 
   private final RequestSpecification requestSpecification;
 
@@ -27,6 +20,10 @@ public class CreateUser {
 
   public String getJob() {
     return job;
+  }
+
+  public String getSurname() {
+    return surname;
   }
 
   public CreateUser() {
@@ -47,13 +44,21 @@ public class CreateUser {
     this.job = job;
   }
 
+  public void setSurname(String surname) {
+    this.surname = surname;
+  }
+
   public String buildBody() {
-    String res = "{\n    \"name\": \"" + this.getName() + "\",\n    \"job\": \"" + this.getJob() + "\"\n}";
-    return res;
+    JSONObject request = new JSONObject();
+    request.put("name", this.name);
+    request.put("job", this.job);
+    return request.toString(4);
   }
 
   public String buildBodyWithSurname() {
-    String res = "{\n    \"name\": \"" + this.getName() +" " + this.getSurname() + "\",\n    \"job\": \"" + this.getJob() + "\"\n}";
-    return res;
+    JSONObject request = new JSONObject();
+    request.put("name", this.name + " "+ this.surname);
+    request.put("job", this.job);
+    return request.toString(4);
   }
 }

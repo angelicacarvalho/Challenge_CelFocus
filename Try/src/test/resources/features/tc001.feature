@@ -1,6 +1,6 @@
 Feature: Product Subscription
   @RegressionTest
-  Scenario:
+  Scenario: Calculate the price of a full special support plan for 6 months
     Given I open Chrome and launch the application
     When I select type "Special"
     And I select support plan "Full"

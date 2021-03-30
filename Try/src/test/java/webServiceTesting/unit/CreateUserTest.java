@@ -22,7 +22,6 @@ public class CreateUserTest {
   public void setup() {
     createUser.setName("testName");
     createUser.setJob("testJob");
-    System.out.println();
   }
 
   @Test

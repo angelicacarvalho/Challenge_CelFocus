@@ -58,7 +58,6 @@ public class StepsBrowserTesting {
     @Then("^I close Chrome$")
     public void closeChrome()
     {
-        System.out.println("=================0\nI WILL CLOSE!");
         driver.quit();
     }
 
